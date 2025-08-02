@@ -19,6 +19,7 @@ struct InitialChatView: View {
                 .foregroundStyle(.gray2)
                 .multilineTextAlignment(.center)
                 .padding(.top, 16)
+                .padding(.horizontal, 20)
         }
         .padding(.bottom, 20)
     }
