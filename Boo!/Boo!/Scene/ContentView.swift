@@ -16,9 +16,7 @@ struct ContentView: View {
                     }
                 }
         } else {
-            Text("Launch Screen 예제 앱")
-                .font(.largeTitle)
-                .fontWeight(.black)
+            LoginView()
         }
     }
 }
