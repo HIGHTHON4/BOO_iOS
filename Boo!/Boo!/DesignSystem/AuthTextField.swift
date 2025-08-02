@@ -26,6 +26,7 @@ struct AuthTextField: View {
             .background(.whiteBoo.opacity(0.1))
             .cornerRadius(100)
             .font(.pretendard(.medium, size: 14))
+            .foregroundStyle(.whiteBoo)
         }
         .padding(.horizontal, 20)
     }
