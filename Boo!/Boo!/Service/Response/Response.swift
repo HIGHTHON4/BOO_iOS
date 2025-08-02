@@ -73,3 +73,8 @@ struct ReportDetail: Decodable {
     let fearLevel: String
     let summary: String
 }
+
+struct TodayHorror: Decodable {
+    let reportId: String
+    let title: String
+}
