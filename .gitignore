@@ -29,3 +29,4 @@ fastlane/screenshots
 # Other
 *.DS_Store
 Secrets.swift
+GoogleService-Info.plist

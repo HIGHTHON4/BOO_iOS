@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		880360162E3E7CCE0001A48E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 880360152E3E7CCE0001A48E /* Moya */; };
+		880360342E3EC9370001A48E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 880360332E3EC9370001A48E /* FirebaseDatabase */; };
+		880360362E3EC9370001A48E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 880360352E3EC9370001A48E /* FirebaseFirestore */; };
+		880360382E3EC9370001A48E /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 880360372E3EC9370001A48E /* FirebaseFirestoreCombine-Community */; };
+		8803603D2E3ECA430001A48E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8803603C2E3ECA430001A48E /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880360342E3EC9370001A48E /* FirebaseDatabase in Frameworks */,
+				880360382E3EC9370001A48E /* FirebaseFirestoreCombine-Community in Frameworks */,
+				8803603D2E3ECA430001A48E /* FirebaseMessaging in Frameworks */,
 				880360162E3E7CCE0001A48E /* Moya in Frameworks */,
+				880360362E3EC9370001A48E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,10 @@
 			name = "Boo!";
 			packageProductDependencies = (
 				880360152E3E7CCE0001A48E /* Moya */,
+				880360332E3EC9370001A48E /* FirebaseDatabase */,
+				880360352E3EC9370001A48E /* FirebaseFirestore */,
+				880360372E3EC9370001A48E /* FirebaseFirestoreCombine-Community */,
+				8803603C2E3ECA430001A48E /* FirebaseMessaging */,
 			);
 			productName = "Boo!";
 			productReference = 88035F932E3E08620001A48E /* Boo!.app */;
@@ -216,6 +228,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				880360142E3E7CCE0001A48E /* XCRemoteSwiftPackageReference "Moya" */,
+				880360322E3EC9370001A48E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 88035F942E3E08620001A48E /* Products */;
@@ -592,6 +605,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		880360322E3EC9370001A48E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -599,6 +620,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 880360142E3E7CCE0001A48E /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		880360332E3EC9370001A48E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 880360322E3EC9370001A48E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		880360352E3EC9370001A48E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 880360322E3EC9370001A48E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		880360372E3EC9370001A48E /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 880360322E3EC9370001A48E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		8803603C2E3ECA430001A48E /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 880360322E3EC9370001A48E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
