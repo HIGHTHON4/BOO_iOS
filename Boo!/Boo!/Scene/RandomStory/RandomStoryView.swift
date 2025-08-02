@@ -29,9 +29,7 @@ struct RandomStoryView: View {
                         
                         VStack(spacing: 12) {
                             ForEach(Array(viewModel.stories.enumerated()), id: \.element.reportId) { index, story in
-                                Button(action: {
-                                    print("Selected story: \(story.title)")
-                                }) {
+                                NavigationLink(destination: StoryDetailView(reportId: story.reportId)) {
                                     HStack {
                                         Text("\(index + 1). \(story.title)")
                                             .font(.system(size: 16, weight: .medium))

@@ -78,3 +78,9 @@ struct TodayHorror: Decodable {
     let reportId: String
     let title: String
 }
+
+struct HorrorDetail: Decodable {
+    let text: String
+    let content: String
+    let title: String
+}

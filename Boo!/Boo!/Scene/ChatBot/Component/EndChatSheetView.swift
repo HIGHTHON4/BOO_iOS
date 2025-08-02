@@ -21,7 +21,7 @@ struct EndChatSheetView: View {
 
 괴담 리포트에서는 AI가 남긴 괴담 코멘트와 공포 등급을 확인할 수 있습니다.
 
-생성된 리포트는 ‘챗봇 기록' 탭에서도 확인 가능합니다.
+생성된 리포트는 ‘챗봇 기록' 탭에서 확인 가능합니다.
 """
                     )
                     .font(.pretendard(.light, size: 14))

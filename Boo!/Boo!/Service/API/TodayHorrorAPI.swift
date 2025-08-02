@@ -3,6 +3,7 @@ import Foundation
 
 enum TodayHorrorAPI {
     case getHorror
+    case geatHorrorDetail(reportId: String)
 }
 
 extension TodayHorrorAPI: TargetType {
@@ -14,6 +15,8 @@ extension TodayHorrorAPI: TargetType {
         switch self {
         case .getHorror:
             return "/today-horror"
+        case .geatHorrorDetail:
+            return "/today-horror/query"
         }
     }
 
@@ -28,6 +31,9 @@ extension TodayHorrorAPI: TargetType {
         switch self {
         case .getHorror:
             return .requestPlain
+        case .geatHorrorDetail(let reportId):
+            var parameters: [String: String] = ["reportId": reportId]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
     
