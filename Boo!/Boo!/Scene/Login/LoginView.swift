@@ -61,9 +61,15 @@ struct LoginView: View {
             switch result {
             case .success(let response):
                 if response.statusCode == 200 {
-                    print("✅ 로그인 성공: \(response.statusCode)")
-                    DispatchQueue.main.async {
-                        shouldNavigate = true
+                    do {
+                        let decodedData = try JSONDecoder().decode(AccessToken.self, from: response.data)
+                        Token.accessToken = decodedData.accessToken
+                        print("✅ 로그인 성공: \(response.statusCode)")
+                        DispatchQueue.main.async {
+                            shouldNavigate = true
+                        }
+                    } catch {
+                        print("❌ 디코딩 실패: \(error)")
                     }
                 } else {
                     print("⚠️ 로그인 실패 - 상태 코드: \(response.statusCode)")
