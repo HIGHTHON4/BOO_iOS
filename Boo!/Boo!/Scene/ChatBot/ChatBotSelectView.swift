@@ -27,6 +27,7 @@ struct ChatBotSelectView: View {
             id: UUID().uuidString
         )
     ]
+    @State private var shouldNavigateToReport = false
     
     var body: some View {
         NavigationView {
