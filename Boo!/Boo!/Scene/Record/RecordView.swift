@@ -6,12 +6,12 @@ struct RecordView: View {
     @StateObject private var viewModel = RecordViewModel()
     
     let categories = ["최신순", "등급순", "날짜"]
-    let aiOptions = ["전체", "Boo!", "김우진", "열림", "쏘쏘"]
+    let aiOptions = ["전체", "Boo!", "강무진", "엘리", "쏘쏘"]
     
     private let aiUUIDMap: [String: String] = [
         "Boo!": "04d94214-6fce-11f0-9f6c-f645757d12e0",
-        "김우진": "1b9c5e3d-0136-4e5c-80e3-85711e1f53f8",
-        "열림": "8fca0a47-5d8f-4d4f-a9a7-352382d23ff3",
+        "강무진": "1b9c5e3d-0136-4e5c-80e3-85711e1f53f8",
+        "엘리": "8fca0a47-5d8f-4d4f-a9a7-352382d23ff3",
         "쏘쏘": "c17bba2f-e16c-4c80-9b90-6fc1841452d1"
     ]
     
