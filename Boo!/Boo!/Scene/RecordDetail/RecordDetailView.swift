@@ -82,7 +82,7 @@ struct RecordDetailView: View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         }) {
-            Text("채팅 돌아가기")
+            Text("괴담 리포트로 돌아가기")
                 .font(.system(size: 18, weight: .semibold))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)

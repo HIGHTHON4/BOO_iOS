@@ -5,7 +5,6 @@ struct ChatMessagesView: View {
     @ObservedObject var viewModel: ChatViewModel
     @State private var isShowingEndSheet = false
     @Environment(\.dismiss) private var dismiss
-    private let ChatProvider = MoyaProvider<ChatAPI>(plugins: [MoyaLoggingPlugin()])
 
     var body: some View {
         BackgroundWrapper {
@@ -33,9 +32,17 @@ struct ChatMessagesView: View {
             }
             .sheet(isPresented: $isShowingEndSheet) {
                 EndChatSheetView {
-                    isShowingEndSheet = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         dismiss()
+                        isShowingEndSheet = false
+                    }
+                    viewModel.stopChat { result in
+                        switch result {
+                        case .success:
+                            print("성공")
+                        case .failure(let error):
+                            print("❌ 대화 종료 실패: \(error)")
+                        }
                     }
                 }
                 .presentationDetents([.height(290)])
@@ -57,17 +64,7 @@ struct ChatMessagesView: View {
             Spacer()
 
             Button {
-                viewModel.stopChat { result in
-                    switch result {
-                    case .success:
-                        isShowingEndSheet = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            dismiss()
-                        }
-                    case .failure(let error):
-                        print("대화 종료 실패: \(error)")
-                    }
-                }
+                isShowingEndSheet = true 
             } label: {
                 Text("대화 종료하기")
                     .font(.pretendard(.light, size: 10))

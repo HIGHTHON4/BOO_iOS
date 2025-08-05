@@ -46,7 +46,6 @@ class ChatViewModel: ObservableObject {
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    // 필요하면 로컬 상태 초기화
                     self.resetChat()
                     completion?(.success(()))
                 }

@@ -26,11 +26,11 @@ struct EndChatSheetView: View {
                     )
                     .font(.pretendard(.light, size: 14))
                     .foregroundStyle(.whiteBoo)
-                    .fixedSize(horizontal: false, vertical: true) // ✅ 줄바꿈 허용
+                    .fixedSize(horizontal: false, vertical: true)
                 }
 
                 Button {
-                    onConfirm()
+                    onConfirm() // ✅ 종료 로직 위임
                 } label: {
                     Text("대화 종료하기")
                         .font(.pretendard(.bold, size: 16))
@@ -45,7 +45,4 @@ struct EndChatSheetView: View {
             .padding(.bottom, 40)
         }
     }
-}
-#Preview {
-    EndChatSheetView(onConfirm: { })
 }
